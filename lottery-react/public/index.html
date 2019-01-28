@@ -23,6 +23,18 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script>
+                window.addEventListener('load', async () => {
+                    if (window.ethereum) {
+                        try {
+                            await ethereum.enable()
+                            console.log(window.ethereum)
+                        } catch (error) {
+                            console.error(error)
+                        }
+                    }
+                })
+            </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
